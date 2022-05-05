@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<head>
+<title>Virtual Scraper</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+{% endblock %}
+
+{% block body %}
+<body style="background-color:lightsteelblue;">
+    <nav>
+       <div class="image">
+          <img src="https://cdn2.vectorstock.com/i/1000x1000/66/06/grey-blue-alphabet-letter-vs-v-s-logo-3d-design-vector-20646606.jpg" alt="" width="100" height="65">
+      </div>
+       <div class="logo">
+          Virtual Scraper
+       </div>
+       <input type="checkbox" id="click">
+       <label for="click" class="menu-btn">
+       <i class="fas fa-bars"></i>
+       </label>
+       <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Feedback</a></li>
+       </ul>
+    </nav>
+<div class="content">
+    <div>
+        <div class="form">
+            <form action="/review" method="POST">
+               <input type="text" name="content" id="content" class="searchTerm" placeholder="Enter your product URL">
+               <button type="submit" class="searchButton">
+               <i class="fa fa-search"></i>
+           </form>
+                
+             </button>
+           </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
